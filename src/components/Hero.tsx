@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button"
-import nikitaHeadshot from "@/assets/nikita-headshot.jpg"
+import nikitaHeadshot from "@/assets/nikita-vora-founder.webp"
 
 const Hero = () => {
   return (
