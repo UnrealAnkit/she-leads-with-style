@@ -47,39 +47,21 @@ const Experience = () => {
         
         <div className="max-w-6xl mx-auto">
           <div className="relative">
-            {/* Main timeline line */}
+            {/* Timeline line */}
             <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-primary/30 hidden md:block transform -translate-x-0.5"></div>
             
-            <div className="space-y-16">
+            <div className="space-y-12">
               {experiences.map((exp, index) => {
                 const isEven = index % 2 === 0;
                 return (
                   <div key={index} className="relative">
-                    {/* Center timeline dot */}
-                    <div className="absolute left-1/2 w-4 h-4 bg-primary rounded-full hidden md:flex items-center justify-center transform -translate-x-1/2 z-10">
-                      <div className="w-2 h-2 bg-background rounded-full"></div>
-                    </div>
-                    
-                    {/* Connecting line from center to experience dot */}
-                    <div className={`absolute top-2 w-24 h-0.5 bg-primary/40 hidden md:block ${
-                      isEven 
-                        ? 'left-1/2 ml-2' 
-                        : 'right-1/2 mr-2'
-                    }`}></div>
-                    
-                    {/* Experience side dot */}
-                    <div className={`absolute top-0 w-6 h-6 bg-primary/80 rounded-full hidden md:flex items-center justify-center z-10 ${
-                      isEven 
-                        ? 'left-1/2 ml-24' 
-                        : 'right-1/2 mr-24'
-                    }`}>
-                      <div className="w-2 h-2 bg-background rounded-full"></div>
+                    {/* Timeline dot */}
+                    <div className="absolute left-1/2 w-8 h-8 bg-primary rounded-full hidden md:flex items-center justify-center transform -translate-x-1/2">
+                      <div className="w-3 h-3 bg-background rounded-full"></div>
                     </div>
                     
                     <div className={`flex items-center ${isEven ? 'md:justify-start' : 'md:justify-end'}`}>
-                      <div className={`w-full md:w-5/12 bg-card border border-border rounded-2xl p-8 hover:shadow-lg transition-all duration-300 hover:scale-[1.02] ${
-                        isEven ? 'md:mr-auto md:ml-32' : 'md:ml-auto md:mr-32'
-                      }`}>
+                      <div className={`w-full md:w-5/12 bg-card border border-border rounded-2xl p-8 hover:shadow-lg transition-shadow duration-300 ${isEven ? 'md:mr-auto' : 'md:ml-auto'}`}>
                         <div className="space-y-4">
                           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
                             <div>
