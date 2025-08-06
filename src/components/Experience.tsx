@@ -53,24 +53,32 @@ const Experience = () => {
             <div className="space-y-16">
               {experiences.map((exp, index) => {
                 const isEven = index % 2 === 0;
-                const isLast = index === experiences.length - 1;
                 return (
                   <div key={index} className="relative">
-                    {/* Timeline dot */}
-                    <div className="absolute left-1/2 w-8 h-8 bg-primary rounded-full hidden md:flex items-center justify-center transform -translate-x-1/2 z-10">
-                      <div className="w-3 h-3 bg-background rounded-full"></div>
+                    {/* Center timeline dot */}
+                    <div className="absolute left-1/2 w-4 h-4 bg-primary rounded-full hidden md:flex items-center justify-center transform -translate-x-1/2 z-10">
+                      <div className="w-2 h-2 bg-background rounded-full"></div>
                     </div>
                     
-                    {/* Connecting line to card */}
-                    <div className={`absolute top-4 w-16 h-0.5 bg-primary/50 hidden md:block ${
+                    {/* Connecting line from center to experience dot */}
+                    <div className={`absolute top-2 w-24 h-0.5 bg-primary/40 hidden md:block ${
                       isEven 
-                        ? 'left-1/2 ml-4' 
-                        : 'right-1/2 mr-4'
+                        ? 'left-1/2 ml-2' 
+                        : 'right-1/2 mr-2'
                     }`}></div>
+                    
+                    {/* Experience side dot */}
+                    <div className={`absolute top-0 w-6 h-6 bg-primary/80 rounded-full hidden md:flex items-center justify-center z-10 ${
+                      isEven 
+                        ? 'left-1/2 ml-24' 
+                        : 'right-1/2 mr-24'
+                    }`}>
+                      <div className="w-2 h-2 bg-background rounded-full"></div>
+                    </div>
                     
                     <div className={`flex items-center ${isEven ? 'md:justify-start' : 'md:justify-end'}`}>
                       <div className={`w-full md:w-5/12 bg-card border border-border rounded-2xl p-8 hover:shadow-lg transition-all duration-300 hover:scale-[1.02] ${
-                        isEven ? 'md:mr-auto md:ml-20' : 'md:ml-auto md:mr-20'
+                        isEven ? 'md:mr-auto md:ml-32' : 'md:ml-auto md:mr-32'
                       }`}>
                         <div className="space-y-4">
                           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
