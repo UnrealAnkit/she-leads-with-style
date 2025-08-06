@@ -47,21 +47,31 @@ const Experience = () => {
         
         <div className="max-w-6xl mx-auto">
           <div className="relative">
-            {/* Timeline line */}
+            {/* Main timeline line */}
             <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-primary/30 hidden md:block transform -translate-x-0.5"></div>
             
-            <div className="space-y-12">
+            <div className="space-y-16">
               {experiences.map((exp, index) => {
                 const isEven = index % 2 === 0;
+                const isLast = index === experiences.length - 1;
                 return (
                   <div key={index} className="relative">
                     {/* Timeline dot */}
-                    <div className="absolute left-1/2 w-8 h-8 bg-primary rounded-full hidden md:flex items-center justify-center transform -translate-x-1/2">
+                    <div className="absolute left-1/2 w-8 h-8 bg-primary rounded-full hidden md:flex items-center justify-center transform -translate-x-1/2 z-10">
                       <div className="w-3 h-3 bg-background rounded-full"></div>
                     </div>
                     
+                    {/* Connecting line to card */}
+                    <div className={`absolute top-4 w-16 h-0.5 bg-primary/50 hidden md:block ${
+                      isEven 
+                        ? 'left-1/2 ml-4' 
+                        : 'right-1/2 mr-4'
+                    }`}></div>
+                    
                     <div className={`flex items-center ${isEven ? 'md:justify-start' : 'md:justify-end'}`}>
-                      <div className={`w-full md:w-5/12 bg-card border border-border rounded-2xl p-8 hover:shadow-lg transition-shadow duration-300 ${isEven ? 'md:mr-auto' : 'md:ml-auto'}`}>
+                      <div className={`w-full md:w-5/12 bg-card border border-border rounded-2xl p-8 hover:shadow-lg transition-all duration-300 hover:scale-[1.02] ${
+                        isEven ? 'md:mr-auto md:ml-20' : 'md:ml-auto md:mr-20'
+                      }`}>
                         <div className="space-y-4">
                           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
                             <div>
