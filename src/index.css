@@ -2,41 +2,56 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+/* Nikita Vora Portfolio Design System
+Sophisticated coral, beige, and charcoal palette for women's empowerment brand
 All colors MUST be HSL.
 */
 
 @layer base {
   :root {
+    /* Brand Colors */
+    --coral: 10 100% 69%;           /* Deep coral #FF6F61 */
+    --coral-light: 10 100% 80%;     /* Lighter coral for hover states */
+    --coral-dark: 10 100% 60%;      /* Darker coral for active states */
+    
+    --beige: 44 67% 87%;            /* Soft beige #F5E8C7 */
+    --beige-light: 44 67% 92%;      /* Lighter beige for subtle backgrounds */
+    --beige-dark: 44 67% 80%;       /* Darker beige for borders */
+    
+    --charcoal: 0 0% 20%;           /* Charcoal gray #333333 */
+    --charcoal-light: 0 0% 40%;     /* Lighter charcoal for secondary text */
+    --charcoal-lighter: 0 0% 60%;   /* Even lighter for muted text */
+    
+    /* System Colors mapped to brand */
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: var(--charcoal);
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: var(--charcoal);
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: var(--charcoal);
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: var(--coral);
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: var(--beige);
+    --secondary-foreground: var(--charcoal);
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: var(--beige-light);
+    --muted-foreground: var(--charcoal-light);
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: var(--beige-dark);
+    --accent-foreground: var(--charcoal);
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: var(--beige-dark);
+    --input: var(--beige-dark);
+    --ring: var(--coral);
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
 
