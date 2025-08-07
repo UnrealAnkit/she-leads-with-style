@@ -19,6 +19,9 @@ const Header = () => {
             <a href="#services" className="font-inter text-foreground hover:text-primary transition-colors duration-200">
               Portfolio
             </a>
+            <a href="/blog" className="font-inter text-foreground hover:text-primary transition-colors duration-200">
+              Blog
+            </a>
             <a href="#contact" className="font-inter text-foreground hover:text-primary transition-colors duration-200">
               Contact
             </a>
