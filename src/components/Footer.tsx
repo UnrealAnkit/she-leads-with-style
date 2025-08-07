@@ -2,10 +2,9 @@ import { Linkedin, Instagram, Twitter, Youtube, Mail } from "lucide-react"
 
 const Footer = () => {
   const socialLinks = [
-    { icon: Linkedin, href: "#", label: "LinkedIn" },
-    { icon: Instagram, href: "#", label: "Instagram" },
-    { icon: Twitter, href: "#", label: "Twitter" },
-    { icon: Youtube, href: "#", label: "YouTube" },
+    { icon: Linkedin, href: "https://www.linkedin.com/in/nikitavora/", label: "LinkedIn" },
+    { icon: Instagram, href: "https://www.instagram.com/sheleadsofficial2023/?hl=en", label: "Instagram" },
+    { icon: Youtube, href: "https://www.youtube.com/@asknikita", label: "YouTube" },
     { icon: Mail, href: "mailto:hello@nikitavora.com", label: "Email" }
   ]
 
@@ -41,13 +40,19 @@ const Footer = () => {
           <div className="space-y-6">
             <h4 className="font-montserrat font-semibold text-lg">Quick Links</h4>
             <div className="space-y-3">
-              {['About', 'Services', 'Portfolio', 'Contact', 'Blog'].map((link, index) => (
+              {[
+                { name: 'About', href: '#about' },
+                { name: 'Services', href: '#services' },
+                { name: 'Experience', href: '#experience' },
+                { name: 'Contact', href: '#contact' },
+                { name: 'Portfolio', href: '#portfolio' }
+              ].map((link, index) => (
                 <a
                   key={index}
-                  href={`#${link.toLowerCase()}`}
+                  href={link.href}
                   className="block font-inter text-background/80 hover:text-primary transition-colors duration-200"
                 >
-                  {link}
+                  {link.name}
                 </a>
               ))}
             </div>

@@ -9,18 +9,35 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Brand Colors */
-    --coral: 10 100% 69%;           /* Deep coral #FF6F61 */
-    --coral-light: 10 100% 80%;     /* Lighter coral for hover states */
-    --coral-dark: 10 100% 60%;      /* Darker coral for active states */
+    /* Brand Colors - Enhanced for premium feel */
+    --coral: 14 92% 66%;            /* Refined coral #F56565 */
+    --coral-light: 14 92% 75%;      /* Lighter coral for hover states */
+    --coral-dark: 14 92% 56%;       /* Darker coral for active states */
+    --coral-glow: 14 92% 85%;       /* Soft glow for highlights */
     
-    --beige: 44 67% 87%;            /* Soft beige #F5E8C7 */
-    --beige-light: 44 67% 92%;      /* Lighter beige for subtle backgrounds */
-    --beige-dark: 44 67% 80%;       /* Darker beige for borders */
+    --beige: 43 58% 88%;            /* Premium warm beige #F1EDE3 */
+    --beige-light: 43 58% 94%;      /* Lighter beige for subtle backgrounds */
+    --beige-dark: 43 58% 82%;       /* Darker beige for borders */
+    --beige-warm: 38 42% 85%;       /* Warmer beige variant */
     
-    --charcoal: 0 0% 20%;           /* Charcoal gray #333333 */
-    --charcoal-light: 0 0% 40%;     /* Lighter charcoal for secondary text */
-    --charcoal-lighter: 0 0% 60%;   /* Even lighter for muted text */
+    --charcoal: 215 25% 18%;        /* Premium charcoal #2A2F3A */
+    --charcoal-light: 215 15% 35%;  /* Lighter charcoal for secondary text */
+    --charcoal-lighter: 215 8% 55%; /* Even lighter for muted text */
+    
+    --gold: 45 78% 68%;             /* Premium gold accent #E6C068 */
+    --gold-light: 45 78% 78%;       /* Lighter gold for highlights */
+    
+    /* Premium gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--coral)), hsl(var(--gold)));
+    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%), hsl(var(--beige-light)));
+    --gradient-overlay: linear-gradient(135deg, hsl(var(--coral) / 0.08), hsl(var(--gold) / 0.05));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(var(--beige-light)));
+    
+    /* Premium shadows */
+    --shadow-elegant: 0 12px 40px -10px hsl(var(--coral) / 0.15);
+    --shadow-premium: 0 25px 60px -20px hsl(var(--charcoal) / 0.12);
+    --shadow-subtle: 0 4px 20px -8px hsl(var(--charcoal) / 0.08);
+    --shadow-glow: 0 0 30px hsl(var(--coral) / 0.2);
     
     /* System Colors mapped to brand */
     --background: 0 0% 100%;
@@ -116,5 +133,39 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  /* Premium card component */
+  .premium-card {
+    background: var(--gradient-card);
+    box-shadow: var(--shadow-subtle);
+    border: 1px solid hsl(var(--beige-dark) / 0.3);
+    backdrop-filter: blur(10px);
+  }
+  
+  /* Elegant button hover effects */
+  .btn-elegant {
+    background: var(--gradient-primary);
+    box-shadow: var(--shadow-elegant);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .btn-elegant:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-premium);
+  }
+  
+  /* Premium glass morphism effect */
+  .glass-effect {
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+  }
+  
+  /* Smooth transitions for all interactive elements */
+  .smooth-transition {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 }

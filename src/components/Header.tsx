@@ -25,7 +25,7 @@ const Header = () => {
             <Button 
               className="bg-primary hover:bg-primary/90 text-primary-foreground font-montserrat font-semibold px-6 py-2 rounded-full transition-all duration-200 hover:shadow-lg"
             >
-              Hire Me
+              Let's Connect
             </Button>
           </div>
 
