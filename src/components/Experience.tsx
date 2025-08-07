@@ -73,9 +73,20 @@ const Experience = () => {
                               <h3 className="font-montserrat font-bold text-xl text-foreground">
                                 {exp.role}
                               </h3>
-                              <p className="font-montserrat font-semibold text-primary">
-                                {exp.company}
-                              </p>
+                              {exp.company === "SHELeads India" ? (
+                                <a 
+                                  href="https://sheleadsindia.in" 
+                                  target="_blank" 
+                                  rel="noopener noreferrer"
+                                  className="font-montserrat font-semibold text-primary hover:text-primary/80 transition-colors duration-200"
+                                >
+                                  {exp.company}
+                                </a>
+                              ) : (
+                                <p className="font-montserrat font-semibold text-primary">
+                                  {exp.company}
+                                </p>
+                              )}
                             </div>
                             <span className="font-inter text-sm text-muted-foreground bg-secondary px-3 py-1 rounded-full">
                               {exp.year}
