@@ -1,33 +1,38 @@
 const Experience = () => {
   const experiences = [
     {
-      year: "2020 - Present",
-      role: "Founder & CEO",
-      company: "SHELeadsIndia",
+      year: "Jun 2023 - Present",
+      role: "Founder",
+      company: "SHELeads India",
       achievements: [
-        "Empowered 10,000+ women entrepreneurs across 22 countries",
-        "Built a community of ambitious female business leaders",
-        "Created comprehensive digital marketing training programs"
+        "Built the only online digital platform for women to do business",
+        "Expertise in Strategic Thinking & Start-up Leadership",
+        "Providing Management Consulting & Marketing Consulting services",
+        "Focused on Business Strategy & Business Ownership guidance"
       ]
     },
     {
-      year: "2018 - Present", 
+      year: "Feb 2017 - Present", 
       role: "Founder",
       company: "SMM Unleashed",
       achievements: [
-        "Developed cutting-edge social media marketing strategies",
-        "Helped 500+ businesses scale their online presence",
-        "Generated over $10M in revenue for clients"
+        "Providing Digital ecosystem to Business Owners with DIY guidance",
+        "Digital Automation Consultation & Training (Online & Offline)",
+        "Recognition & Reward Programs for Women Entrepreneurs",
+        "Creating Free Resources and bridging Social Media Agencies with Business owners",
+        "Managing & Training teams for Marketing with Strategic B2B focus"
       ]
     },
     {
-      year: "2019 - Present",
-      role: "Co-Founder",
+      year: "Nov 2016 - Present",
+      role: "Founder",
       company: "Women Wave",
       achievements: [
-        "Created the largest women's networking platform in Asia",
-        "Organized 100+ networking events and workshops",
-        "Facilitated partnerships worth over $5M"
+        "Empowering women entrepreneurs through mentoring and hand-holding",
+        "Guiding through intensive building and mentoring programs",
+        "Panel of domain experts providing guidance across business facets",
+        "Making businesses stronger, more profitable, and resilient",
+        "Helping produce better quality products and scale up operations"
       ]
     }
   ]
