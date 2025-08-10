@@ -70,6 +70,16 @@ const Footer = () => {
               >
                 hello@nikitavora.com
               </a>
+              <div className="pt-2">
+                <a
+                  href="https://tidycal.com/nikitavora"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block font-inter text-primary hover:underline font-semibold"
+                >
+                  Book a Call with Nikita →
+                </a>
+              </div>
             </div>
           </div>
         </div>

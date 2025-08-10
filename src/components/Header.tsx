@@ -38,6 +38,7 @@ const Header = () => {
             </a>
             <Button 
               className="bg-primary hover:bg-primary/90 text-primary-foreground font-montserrat font-semibold px-6 py-2 rounded-full transition-all duration-200 hover:shadow-lg"
+              onClick={() => window.open('https://tidycal.com/nikitavora', '_blank')}
             >
               Let's Connect
             </Button>
@@ -100,7 +101,10 @@ const Header = () => {
               </a>
               <Button 
                 className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-montserrat font-semibold px-6 py-3 rounded-full transition-all duration-200 hover:shadow-lg"
-                onClick={closeMobileMenu}
+                onClick={() => {
+                  closeMobileMenu()
+                  window.open('https://tidycal.com/nikitavora', '_blank')
+                }}
               >
                 Let's Connect
               </Button>

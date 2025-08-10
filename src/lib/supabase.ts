@@ -27,3 +27,4 @@ export interface AdminUser {
   role: 'admin' | 'editor'
   created_at: string
 }
+

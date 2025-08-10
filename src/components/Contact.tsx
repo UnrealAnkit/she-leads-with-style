@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { useToast } from "@/hooks/use-toast"
-import { Send, CheckCircle } from "lucide-react"
+import { Send, CheckCircle, ArrowRight } from "lucide-react"
 
 const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -100,6 +100,34 @@ const Contact = () => {
               <p className="font-inter text-foreground/80 text-center">
                 <span className="font-semibold text-primary">Quick Response:</span> I typically respond within 24 hours
               </p>
+            </div>
+
+            {/* Book a Call Section */}
+            <div className="bg-gradient-to-br from-primary/10 to-primary/5 border border-primary/30 rounded-2xl p-8 text-center space-y-6">
+              <div className="space-y-4">
+                <h3 className="font-montserrat font-bold text-2xl text-foreground">
+                  Book a Call with Nikita
+                </h3>
+                <p className="font-inter text-muted-foreground">
+                  Ready for a personalized consultation? Book a call to discuss your business goals and get expert guidance.
+                </p>
+              </div>
+              
+              <div className="space-y-4">
+                <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground">
+                  <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                  Available for consultations
+                </div>
+                
+                <Button 
+                  size="lg"
+                  className="bg-primary hover:bg-primary/90 text-primary-foreground font-montserrat font-semibold px-8 py-4 rounded-full transition-all duration-200 hover:shadow-lg hover:scale-105 group"
+                  onClick={() => window.open('https://tidycal.com/nikitavora', '_blank')}
+                >
+                  Schedule Your Call
+                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
+                </Button>
+              </div>
             </div>
           </div>
 

@@ -34,6 +34,7 @@ const CTA = () => {
                 <Button 
                   size="lg"
                   className="bg-primary hover:bg-primary/90 text-primary-foreground font-montserrat font-semibold px-8 py-4 rounded-full transition-all duration-200 hover:shadow-lg hover:scale-105 group"
+                  onClick={() => window.open('https://tidycal.com/nikitavora', '_blank')}
                 >
                   Connect with Nikita
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-200" />

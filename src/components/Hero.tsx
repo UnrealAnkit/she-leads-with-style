@@ -31,6 +31,7 @@ const Hero = () => {
               <Button 
                 size="lg"
                 className="bg-primary hover:bg-primary/90 text-primary-foreground font-montserrat font-semibold px-8 py-3 rounded-full transition-all duration-200 hover:shadow-lg hover:scale-105"
+                onClick={() => window.open('https://tidycal.com/nikitavora', '_blank')}
               >
                 Start Your Journey
               </Button>

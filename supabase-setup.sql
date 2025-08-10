@@ -99,3 +99,4 @@ ALTER TABLE admin_users ENABLE ROW LEVEL SECURITY;
 -- Create policies for admin_users
 CREATE POLICY "Admins can manage admin users" ON admin_users
   FOR ALL USING (auth.role() = 'authenticated');
+
